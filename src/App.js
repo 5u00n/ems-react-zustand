@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 
+import React from 'react';
+
+import { useSettingStore } from './store/store';
+import Navigation from './components/Navigation';
+
+import SideBar from './components/SideBar';
+import Footer from './components/Footer';
+
+
 function App() {
+
+
+  const dark = useSettingStore((state) => state.dark);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" data-theme={dark ? "dark" : "light"}>
+      <Navigation />
+
+      <main className="w-screen inline-flex flex-grow">
+        <SideBar className="flex-1" />
+        <div className='flex-1 mt-16'>
+          <h1>React Zustand</h1>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
