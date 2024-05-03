@@ -119,4 +119,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 If you found this project helpful or would like to support its development, consider buying me a coffee! Your contribution helps keep the project maintained and improves its functionality.
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%E2%98%95-yellow?style=for-the-badge&logo=buy-me-a-coffee)](link/to/buy-me-a-coffee)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%E2%98%95-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/5u00n)
