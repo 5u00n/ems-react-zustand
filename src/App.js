@@ -15,16 +15,25 @@ function App() {
   const dark = useSettingStore((state) => state.dark);
 
   return (
-    <div className="App" data-theme={dark ? "dark" : "light"}>
-      <Navigation />
+    <div className="App flex flex-col min-h-screen" data-theme={dark ? "dark" : "light"}>
 
-      <main className="w-screen inline-flex flex-grow">
+
+      <main className="w-screen flex-grow flex overflow-auto">
         <SideBar className="flex-1" />
-        <div className='flex-1 mt-16'>
+        <div className='flex flex-col justify-between flex-1'>
+          <div className="sticky top-0">
+            <Navigation />
+          </div>
+
           <h1>React Zustand</h1>
+
+          <div className="sticky bottom-0">
+            <Footer />
+          </div>
         </div>
       </main>
-      <Footer />
+
+
     </div>
   );
 }
