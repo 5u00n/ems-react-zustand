@@ -7,7 +7,7 @@ import Navigation from './components/Navigation';
 
 import SideBar from './components/SideBar';
 import Footer from './components/Footer';
-
+import SideBarMobile from './components/SideBarMobile';
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App flex flex-col min-h-screen" data-theme={dark ? "dark" : "light"}>
 
+      <SideBarMobile />
 
       <main className="w-screen flex-grow flex overflow-auto">
         <SideBar className="flex-1" />
@@ -27,7 +28,7 @@ function App() {
 
           <h1>React Zustand</h1>
 
-          <div className="sticky bottom-0">
+          <div className="md:sticky bottom-0">
             <Footer />
           </div>
         </div>
