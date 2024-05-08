@@ -3,9 +3,9 @@ import { devtools,persist } from 'zustand/middleware';
 
 let settingStore = (set) => ({
         dark: false,
-        sidebar:"big",
+        sidebar:true,
         toggleDarkMode: () => set((state) => ({dark: !state.dark})),
-        setSidebar: (sidebar) => set({sidebar}),
+        toggleSidebar: () => set( (state) => ({sidebar: !state.sidebar})),
     }
 );
 

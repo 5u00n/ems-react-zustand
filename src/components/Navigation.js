@@ -3,28 +3,19 @@ import { useSettingStore } from "../store/store";
 import { RiMenu2Fill } from "react-icons/ri";
 
 const Navigation = () => {
-    const setSidebar = useSettingStore((state) => state.setSidebar);
+    const toggleSidebar = useSettingStore((state) => state.toggleSidebar);
     const sidebar = useSettingStore((state) => state.sidebar);
 
-    //function to check if mobile or desktop
-    const checkMobile = () => {
-        if (window.innerWidth < 768) {
-            return true;
-        }
-        return false;
-    }
+
 
     return (
         <div className="navbar bg-base-200 m-0 p-0">
             <div className="flex-1 ">
                 <div className="ml-2">
-                    <button className="btn btn-ghost" onClick={() => setSidebar(checkMobile() ? sidebar === "big" ? "hidden" : "big" : sidebar === "big" ? "small" : "big")}><RiMenu2Fill /> </button>
+                    <button className="btn btn-ghost" onClick={toggleSidebar}><RiMenu2Fill size={24}/> </button>
                 </div>
             </div>
 
-
-
-            
                 <div className="flex-none">
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
